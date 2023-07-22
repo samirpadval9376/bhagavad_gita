@@ -40,8 +40,7 @@ class ChapterPage extends StatelessWidget {
           JsonModals verse = pro.allData[ind];
           return pro.allData.isNotEmpty
               ? ListView.builder(
-                  itemCount:
-                      verse.chapter_id == ind + 1 ? pro.allData.length : null,
+                  itemCount: pro.allData.length,
                   itemBuilder: (context, index) {
                     JsonModals verse1 = pro.allData[index];
                     return verse1.chapter_id == ind + 1

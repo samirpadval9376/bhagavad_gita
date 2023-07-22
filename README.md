@@ -1,16 +1,5 @@
-# json_app
+# Bhagavad Gita
 
-A new Flutter project.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src = "https://github.com/samirpadval9376/bhagavad_gita/assets/130815089/4091dabb-eb74-4be2-a358-9b03dedae9ae" height = "400"></img>
+<img src = "https://github.com/samirpadval9376/bhagavad_gita/assets/130815089/44b6579c-222d-404d-b878-054eb0de7a92" height = "400"></img>

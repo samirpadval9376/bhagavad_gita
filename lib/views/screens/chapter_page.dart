@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:json_app/controllers/json_controller.dart';
 import 'package:json_app/modals/json_modals.dart';
+import 'package:json_app/utils/my_page_route.dart';
 import 'package:provider/provider.dart';
 
 class ChapterPage extends StatelessWidget {
@@ -45,39 +46,47 @@ class ChapterPage extends StatelessWidget {
                     JsonModals verse1 = pro.allData[index];
                     return verse1.chapter_id == ind + 1
                         ? Card(
-                            child: Container(
-                              padding: EdgeInsets.only(
-                                left: 10,
-                              ),
-                              height: s.height * 0.3,
-                              width: s.width,
-                              decoration: BoxDecoration(
-                                color: Colors.deepPurple.shade900,
-                                borderRadius: BorderRadius.circular(15),
-                              ),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  const Spacer(),
-                                  Text(
-                                    "|| ${verse1.verse_number} ||",
-                                    style: const TextStyle(
-                                      color: Colors.white,
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.of(context).pushNamed(
+                                  MyPageRoute.detailPage,
+                                  arguments: verse1,
+                                );
+                              },
+                              child: Container(
+                                padding: const EdgeInsets.only(
+                                  left: 10,
+                                ),
+                                height: s.height * 0.3,
+                                width: s.width,
+                                decoration: BoxDecoration(
+                                  color: Colors.deepPurple.shade900,
+                                  borderRadius: BorderRadius.circular(15),
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    const Spacer(),
+                                    Text(
+                                      "|| ${verse1.verse_number} ||",
+                                      style: const TextStyle(
+                                        color: Colors.white,
+                                      ),
                                     ),
-                                  ),
-                                  const Spacer(
-                                    flex: 3,
-                                  ),
-                                  Text(
-                                    verse1.text,
-                                    style: const TextStyle(
-                                      color: Colors.white,
+                                    const Spacer(
+                                      flex: 3,
                                     ),
-                                  ),
-                                  const Spacer(
-                                    flex: 5,
-                                  ),
-                                ],
+                                    Text(
+                                      verse1.text,
+                                      style: const TextStyle(
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                    const Spacer(
+                                      flex: 5,
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                           )
